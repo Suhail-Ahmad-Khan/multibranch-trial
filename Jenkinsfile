@@ -8,7 +8,7 @@ pipeline {
         }
         
      stage("Checkstyle") {
-     	steps {
+     	   steps {
                     sh "./mvnw checkstyle:checkstyle"
                      
                     step([$class: 'CheckStylePublisher',
