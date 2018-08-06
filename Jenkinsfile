@@ -2,12 +2,13 @@ pipeline {
     agent any
     stages {
         stage('Build') {
-           
+            steps {
                 sh 'echo "Hello world!"'
-            
+            }
         }
         
      stage("Checkstyle") {
+     	steps {
                     sh "./mvnw checkstyle:checkstyle"
                      
                     step([$class: 'CheckStylePublisher',
@@ -19,6 +20,7 @@ pipeline {
                       useStableBuildAsReference: true
                     ])
                 }
+               }
      
     }
 }
