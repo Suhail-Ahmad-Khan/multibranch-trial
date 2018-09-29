@@ -3,7 +3,7 @@ pipeline {
     stages {
         stage('Display') {
             steps {
-                sh 'echo "Hello Bridgelabz!"'
+                sh 'echo "Hello Bridgelabz Developers!"'
             }
         }
         
