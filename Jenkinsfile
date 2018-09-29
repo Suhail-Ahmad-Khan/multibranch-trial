@@ -3,13 +3,13 @@ pipeline {
     stages {
         stage('Display') {
             steps {
-                sh 'echo "Hello Bridgelabz Developers!"'
+                sh 'echo "Hello Developers Of Bridgelabz!"'
             }
         }
         
         stage('Display Branch Name') {
             steps {
-                sh 'echo "Currently on the Develop Branch"'
+                sh 'echo "We are Currently on the Develop Branch"'
             }
         }
     }
