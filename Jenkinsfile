@@ -1,25 +1,16 @@
 pipeline {
     agent any
     stages {
-        stage('Build') {
+        stage('Display') {
             steps {
-                sh 'echo "Hello world!"'
+                sh 'echo "Hello Bridgelabz!"'
             }
         }
         
-     stage("Checkstyle") {
-     	   steps {
-                    sh "./mvnw checkstyle:checkstyle"
-                     
-                    step([$class: 'CheckStylePublisher',
-                      canRunOnFailed: true,
-                      defaultEncoding: '',
-                      healthy: '100',
-                      pattern: '**/target/checkstyle-result.xml',
-                      unHealthy: '90',
-                      useStableBuildAsReference: true
-                    ])
-                }
-          }
+        stage('Display Branch Name') {
+            steps {
+                sh 'echo "Currently on the Develop Branch"'
+            }
+        }
     }
 }
